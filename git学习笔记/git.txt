@@ -1,0 +1,88 @@
+中文乱码：
+名称乱码：git config --global core.quotepath false
+GIT LOG 显示乱码： git config --global i18n.commitencoding utf-8
+                git config --global i18n.logoutputencoding utf-8
+
+
+GIT 本地操作命令：
+1.配置用户信息：
+git config  --global user.name ""
+git config --global user.email ""
+
+2.查看配置信息：
+git config --list
+
+3.初始化GIT仓库：
+git init
+
+4.查看当前工作目录在状态：
+git status
+
+5.往暂存区添加文件：
+git add 文件名称
+git add . 添加所有文件到暂存区
+
+6.把暂存区文件添加到本地仓库：
+git commit -m "提交的说明"
+
+7.查看提交在日志
+git log  查看当前在版本以及以前在版本提交记录
+
+git reflog 查看所有的版本以及回退在记录
+
+8.从本地仓库中回退到指定在版本：
+git reset --hard 提交在ID
+
+不需要提交在本地仓库在文件可以忽略
+在工作目录下 使用编辑器创建  .gitigore文件，
+把不需要提交的文件添加的.gitigore里，就不再提示网GIT仓库提交了。
+
+9.分支操作
+查看当前所有分支 ：  git branch 
+创建一个新的分支 ：（把当前所在的分支拷贝，作为一个副本）
+   git branch 分支名称  
+切换分支： 
+  git checkout 分支名称 
+合并分支：
+在当前分支基础上，将另一个分支并入进来
+    git merge 分支名称 
+删除分支
+ 删除已经合并在分支
+   git branch -d 分支名称
+强制删除分支
+  git branch -D 分支名称
+
+10.远程仓库
+github 全球最大的开源代码托管平台
+www.github.com
+码云 国内最大在平台
+www.gitee.com
+
+推送到远程仓库地址：
+git push -u 远程仓库地址  分支名称
+
+拉取:
+第一次clone：
+git clone 远程仓库地址
+
+从远程仓库拉取：
+git pull 远程仓库地址
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
